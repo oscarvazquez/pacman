@@ -1,0 +1,129 @@
+<html>
+	<head>
+	<title>Pacman</title>
+		<style>
+			body{
+				max-height: 400px;
+			}
+		  	#wrapper{
+			   background-color: clear;
+			   width: 100%;
+			   height: 100vh;
+			   position: relative;
+			   overflow: hidden;
+			}
+			.wall{
+				background-image: url('wall.png');
+				background-color: blue;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.space{
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.pacman{
+				background-image: url('pacman.gif');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.pacman_left{
+				background-image: url('pacman_left.gif');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.pacman_up{
+				background-image: url('pacman_up.gif');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.pacman_down{
+				background-image: url('pacman_down.gif');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.coin {
+				background-image: url('coin.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.cherry{
+				background-image: url('cherry.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			} 
+			.ghost1{
+				background-image: url('ghost1.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.ghost2{
+				background-image: url('ghost2.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.ghost3{
+				background-image: url('ghost3.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.ghost4{
+				background-image: url('ghost4.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "wrapper">
+			<div id = "world"></div>
+			<h3 id = "scoreBoard"></h3>
+		</div>
+
+		<script src = "pacman.js"></script>
+		<script>
+			var map = [
+				1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+				1,0,0,0,8,0,0,0,0,0,0,6,0,0,1,
+				1,0,1,1,1,1,0,0,1,1,1,1,1,0,1,
+				1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,
+				1,0,1,0,5,0,0,0,0,0,0,0,1,0,1,
+				1,0,1,0,0,1,1,0,1,1,0,0,1,0,1,
+				1,0,0,0,0,1,0,0,0,1,0,0,0,0,1,
+				1,0,2,0,0,1,0,0,0,1,0,7,0,0,1,
+				1,0,1,0,0,1,1,1,1,1,0,0,1,0,1,
+				1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,
+				1,0,1,1,1,1,0,0,1,1,1,1,1,0,1,
+				1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+				1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+			];
+			var game = Pacman('world', map, 'scoreBoard', 0, 300)
+			game.drawWorld()
+		</script>
+	</body>
+	68
+
+</html>
